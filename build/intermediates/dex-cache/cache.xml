@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="548f06de403a9409f00554b3ee12a9fdea0e236c">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.4.0_618f29c35294b87aaeeb36420b547532f18338ca/classes.dex" />
+    </item>
+    <item
+        jar="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="97af40eac25d10101001b332035870aa8e9b619d">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_d6462a64e2c49d4dab13e44ec2624e9272d6e971/classes.dex" />
+    </item>
+    <item
+        jar="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="67bd36ee9340ec7c254108936ad16b24bed160cc">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.4.0_7e06566a24d5714148e662b3d5e2ac54920962f3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.4.0/jars/libs/internal_impl-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ea3c07504d2c8f4b13aa17c45c1b68ed9c1c3674">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.4.0_bd08ba7d3121eb9caa16fe1b43cbc99517ef99da/classes.dex" />
+    </item>
+    <item
+        jar="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="094dc7c0add6d7efc188f4b306038a90b96bffe1">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_36c661404f64745f8e1422a235e6acc51c1dda9f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="de4db3785756bfb0915a9f59a9b3f2fea7407be4">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-23.4.0_b40c15ee6b02d3914ec011e2f3d4eb4bf6e0fbab/classes.dex" />
+    </item>
+    <item
+        jar="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="c2c594cace5d83a3227b2b6e658ecbfd586d3ed9">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-23.4.0_6bff7fc2331c5fc6f576ef7308dbb2df752afea3/classes.dex" />
+    </item>
+    <item
+        jar="/Users/oleksandrpotomkin/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.4.0/support-annotations-23.4.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="ffbe55fdb2bb456b1485831706a9eac3300bb6b8">
+        <dex dex="/Users/oleksandrpotomkin/AndroidStudioProjects/IRTGui/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.4.0_d8bbde082f057194fe6458602b6f56005ee96563/classes.dex" />
+    </item>
+
+</items>
