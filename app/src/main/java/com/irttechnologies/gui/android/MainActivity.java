@@ -8,14 +8,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.FrameLayout;
 
 import com.irttechnologies.gui.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Fragment aboutUsFragment;
+    private Fragment fragment;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,15 +59,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showContactUsFragment() {
+        if(findViewById(R.id.main_frame) != null){
+            Log.e("onCreate", "Create layout");
+            boolean createNew = fragment == null;
+
+            // Create a new Fragment to be placed in the activity layout
+            fragment = new ContactUsFragment();
+            showFragment(createNew);
+
+
+        }
     }
 
     private void showAboutUsFragment() {
         if(findViewById(R.id.main_frame) != null){
             Log.e("onCreate", "Create layout");
-            boolean createNew = aboutUsFragment == null;
+            boolean createNew = fragment == null;
 
             // Create a new Fragment to be placed in the activity layout
-            aboutUsFragment = new AboutUsFragment();
+            fragment = new AboutUsFragment();
             showFragment(createNew);
 
 
@@ -81,9 +89,9 @@ public class MainActivity extends AppCompatActivity {
         FragmentTransaction transaction = getSupportFragmentManager()
                                                         .beginTransaction();
         if(createNew)
-            transaction.add(R.id.main_frame, aboutUsFragment);
+            transaction.add(R.id.main_frame, fragment);
         else
-            transaction.replace(R.id.main_frame, aboutUsFragment);
+            transaction.replace(R.id.main_frame, fragment);
 
         transaction.commit();
     }

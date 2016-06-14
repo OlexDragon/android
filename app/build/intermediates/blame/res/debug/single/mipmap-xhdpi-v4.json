@@ -1,6 +1,6 @@
 [
     {
-        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi-v4\\ic_launcher.png",
-        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+        "merged": "/Users/oleksandrpotomkin/AndroidStudioProjects/app/build/intermediates/res/merged/debug/mipmap-xhdpi-v4/ic_launcher.png",
+        "source": "/Users/oleksandrpotomkin/AndroidStudioProjects/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     }
 ]
