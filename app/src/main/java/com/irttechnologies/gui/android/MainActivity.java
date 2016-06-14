@@ -3,21 +3,36 @@ package com.irttechnologies.gui.android;
 import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import com.irttechnologies.gui.R;
+import com.irttechnologies.gui.android.listeners.DrawerItemClickListener;
+
+import java.util.Arrays;
 
 public class MainActivity extends AppCompatActivity {
-
     private Fragment fragment;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ListView mDrawerList = (ListView) findViewById(R.id.left_drawer);
+        String[] menuTitles = getResources().getStringArray(R.array.menu_array);
+        Log.e("menuTitles, ", Arrays.toString(menuTitles));
+
+        // Set the adapter for the list view
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.id.left_drawer, menuTitles);
+        mDrawerList.setAdapter(adapter);
+        // Set the list's click listener
+        mDrawerList.setOnItemClickListener(new DrawerItemClickListener(this));
 
         // However, if we're being restored from a previous state,
         // then we don't need to do anything and should return or else
@@ -45,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         return showFragment(itemId);
     }
 
-    private boolean showFragment(int menuId) {
+    public boolean showFragment(int menuId) {
         switch (menuId) {
             case R.id.menu_about_us:
                 showAboutUsFragment();
@@ -53,14 +68,26 @@ public class MainActivity extends AppCompatActivity {
             case R.id.menu_contact_us:
                 showContactUsFragment();
                 return true;
+            case R.id.menu_control:
+                showControlFragment();
+                return true;
             default:
                 return false;//super.onOptionsItemSelected(item);
         }
     }
 
+    private void showControlFragment() {
+        if(findViewById(R.id.main_frame) != null){
+            boolean createNew = fragment == null;
+
+            // Create a new Fragment to be placed in the activity layout
+            fragment = new ControlFragment();
+            showFragment(createNew);
+        }
+    }
+
     private void showContactUsFragment() {
         if(findViewById(R.id.main_frame) != null){
-            Log.e("onCreate", "Create layout");
             boolean createNew = fragment == null;
 
             // Create a new Fragment to be placed in the activity layout
@@ -73,7 +100,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void showAboutUsFragment() {
         if(findViewById(R.id.main_frame) != null){
-            Log.e("onCreate", "Create layout");
             boolean createNew = fragment == null;
 
             // Create a new Fragment to be placed in the activity layout

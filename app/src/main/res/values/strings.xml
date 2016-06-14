@@ -15,4 +15,6 @@
     <string name="input_power">Input Power</string>
     <string name="output_power">Output Power</string>
     <string name="temperature">Temperature</string>
+    <string name="control">Control</string>
+    <string name="bluetooth">Bluetooth</string>
 </resources>
