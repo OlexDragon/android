@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="address_types_array">
+        <item>Waiting for data</item>
+        <item>Static</item>
+        <item>Dynamic</item>
+    </string-array>
+    <string-array name="redundancy_mode_array">
+        <item>Cold Standby</item>
+        <item>Hot Standby</item>
+    </string-array>
+    <string-array name="redundancy_status_array">
+        <item>Disable</item>
+        <item>Enable</item>
+    </string-array>
+    <string-array name="redundancy_unit_name_array">
+        <item>BUC A</item>
+        <item>BUC B</item>
+    </string-array>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
     <attr format="boolean" name="isLightTheme"/>
@@ -16,12 +33,17 @@
     <color name="abc_search_url_text_normal">#7fa87f</color>
     <color name="abc_search_url_text_pressed">@android:color/black</color>
     <color name="abc_search_url_text_selected">@android:color/black</color>
+    <color name="about_background">#b8000000</color>
+    <color name="about_title">#0798d4</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="aqua">#00FFFF</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000FF</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -47,12 +69,19 @@
     <color name="dim_foreground_disabled_material_light">#80323232</color>
     <color name="dim_foreground_material_dark">#ffbebebe</color>
     <color name="dim_foreground_material_light">#ff323232</color>
+    <color name="electric_blue">#99ffff</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="fuchsia">#FF00FF</color>
+    <color name="gray">#808080</color>
+    <color name="green">#008000</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="hint_foreground_material_dark">@color/bright_foreground_disabled_material_dark</color>
     <color name="hint_foreground_material_light">@color/bright_foreground_disabled_material_light</color>
+    <color name="irt_background">#CC081738</color>
+    <color name="lime">#00FF00</color>
+    <color name="maroon">#800000</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -65,6 +94,8 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <color name="navy">#000080</color>
+    <color name="olive">#808000</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -73,16 +104,23 @@
     <color name="primary_text_default_material_light">#de000000</color>
     <color name="primary_text_disabled_material_dark">#4Dffffff</color>
     <color name="primary_text_disabled_material_light">#39000000</color>
+    <color name="purple">#800080</color>
+    <color name="red">#FF0000</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="silver">#C0C0C0</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_light">#fff1f1f1</color>
+    <color name="teal">#008080</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="yellow">#FFFF00</color>
     <declare-styleable name="ActionBar"><attr name="navigationMode"><enum name="normal" value="0"/><enum name="listMode" value="1"/><enum name="tabMode" value="2"/></attr><attr name="displayOptions"><flag name="none" value="0"/><flag name="useLogo" value="0x1"/><flag name="showHome" value="0x2"/><flag name="homeAsUp" value="0x4"/><flag name="showTitle" value="0x8"/><flag name="showCustom" value="0x10"/><flag name="disableHome" value="0x20"/></attr><attr name="title"/><attr format="string" name="subtitle"/><attr format="reference" name="titleTextStyle"/><attr format="reference" name="subtitleTextStyle"/><attr format="reference" name="icon"/><attr format="reference" name="logo"/><attr format="reference" name="divider"/><attr format="reference" name="background"/><attr format="reference|color" name="backgroundStacked"/><attr format="reference|color" name="backgroundSplit"/><attr format="reference" name="customNavigationLayout"/><attr name="height"/><attr format="reference" name="homeLayout"/><attr format="reference" name="progressBarStyle"/><attr format="reference" name="indeterminateProgressStyle"/><attr format="dimension" name="progressBarPadding"/><attr name="homeAsUpIndicator"/><attr format="dimension" name="itemPadding"/><attr format="boolean" name="hideOnContentScroll"/><attr format="dimension" name="contentInsetStart"/><attr format="dimension" name="contentInsetEnd"/><attr format="dimension" name="contentInsetLeft"/><attr format="dimension" name="contentInsetRight"/><attr format="dimension" name="elevation"/><attr format="reference" name="popupTheme"/></declare-styleable>
     <declare-styleable name="ActionBarLayout"><attr name="android:layout_gravity"/></declare-styleable>
     <declare-styleable name="ActionMenuItemView"><attr name="android:minWidth"/></declare-styleable>
@@ -281,23 +319,67 @@
     <string name="about_us_body">IRT Technologies, an acronym for Intelligent RF Telecom technologies, designs, develops and manufactures advanced satellite RF systems and products for real time voice, data and multimedia delivery anywhere in the world. IRT products are revolutionary innovative, super compact, efficient and reliable, serving both commercial and government sectors. IRT satellite solutions shapes the next-generation communication equipment with its breakthrough technology, vanguard research and development, state of the art engineering design, and product innovation.</string>
     <string name="about_us_footer">IRT Technologies headquarters located in Saint Laurent and operates worldwide.</string>
     <string name="about_us_title">Who We Are</string>
+    <string name="address_type">Address Type</string>
     <string name="app_name">IRT Technologies Inc</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
-    <string name="bluetooth">Bluetooth</string>
+    <string name="attenuation">Attenuation</string>
+    <string name="available_devices">Available Devices</string>
+    <string name="ble_not_supported">BLE is not supported</string>
     <string name="bottom_sheet_behavior" translatable="false">android.support.design.widget.BottomSheetBehavior</string>
+    <string name="built_date">Built Date</string>
+    <string name="cancel">Cancel</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
-    <string name="contact_us">Contact Us</string>
-    <string name="control">Control</string>
+    <string name="connect">Connect</string>
+    <string name="connected">Connected</string>
+    <string name="connecting">Connecting</string>
+    <string name="count">Count</string>
+    <string name="default_gateway">Default Gateway</string>
+    <string name="demo">Demo</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="disconnecting">Disconnecting</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="extended">Extended</string>
+    <string name="frequency">Frequency</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="input_power">Input Power</string>
-    <string name="irt_address">5580 Boulevard Thimens Saint Laurent, QC Canada H4R 2K9</string>
+    <string name="ip_address">IP Address</string>
+    <string name="irt_address">5580 Boulevard Thimens \nSaint Laurent, \nQC Canada \nH4R 2K9</string>
     <string name="irt_email">info@irttechnologies.com</string>
     <string name="irt_fax">+1-844-598-4687</string>
     <string name="irt_phone">+1-514-907-1161</string>
-    <string name="menu_abaut_us">Abaut Us</string>
+    <string name="lo_select">LO Select</string>
+    <string name="lock">Lock</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="menu_alarms">Alarms</string>
+    <string name="menu_bluetooth">Bluetooth</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_control">Control</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_moonitor">Monitor</string>
+    <string name="menu_network">Network</string>
+    <string name="menu_redundancy">Redundancy</string>
+    <string name="mode">Mode</string>
+    <string name="mute">Mute</string>
+    <string name="muted">Muted</string>
+    <string name="not_locked">Not Locked</string>
+    <string name="ok">OK</string>
+    <string name="online">Online</string>
     <string name="output_power">Output Power</string>
+    <string name="part_number">Part Number</string>
+    <string name="redundancy">Redundancy</string>
+    <string name="regular">Regular</string>
+    <string name="scan">Scan</string>
+    <string name="send">Send</string>
+    <string name="serial_number">Serial Number</string>
+    <string name="set">SET</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="stop">Stop</string>
+    <string name="subnet_mask">Subnet Mask</string>
     <string name="temperature">Temperature</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="unit_name">Unit Name</string>
+    <string name="version">Version</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>

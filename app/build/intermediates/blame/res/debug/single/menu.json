@@ -2,5 +2,9 @@
     {
         "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_irt.xml",
         "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\menu\\menu_irt.xml"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\menu\\menu_scan.xml",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\menu\\menu_scan.xml"
     }
 ]

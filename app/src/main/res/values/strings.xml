@@ -1,19 +1,83 @@
 <resources>
     <string name="app_name">IRT Technologies Inc</string>
-    <string name="menu_abaut_us">Abaut Us</string>
-    <string name="contact_us">Contact Us</string>
-
+    <string name="menu_about_us">About Us</string>
+    <string name="menu_contact_us">Contact Us</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="about_us_title">Who We Are</string>
     <string name="about_us_body">IRT Technologies, an acronym for Intelligent RF Telecom technologies, designs, develops and manufactures advanced satellite RF systems and products for real time voice, data and multimedia delivery anywhere in the world. IRT products are revolutionary innovative, super compact, efficient and reliable, serving both commercial and government sectors. IRT satellite solutions shapes the next-generation communication equipment with its breakthrough technology, vanguard research and development, state of the art engineering design, and product innovation.</string>
     <string name="about_us_footer">IRT Technologies headquarters located in Saint Laurent and operates worldwide.</string>
-    <string name="irt_address">5580 Boulevard Thimens Saint Laurent, QC Canada H4R 2K9</string>
+    <string name="irt_address">5580 Boulevard Thimens \nSaint Laurent, \nQC Canada \nH4R 2K9</string>
     <string name="irt_phone">+1-514-907-1161</string>
     <string name="irt_fax">+1-844-598-4687</string>
     <string name="irt_email">info@irttechnologies.com</string>
     <string name="input_power">Input Power</string>
     <string name="output_power">Output Power</string>
     <string name="temperature">Temperature</string>
-    <string name="control">Control</string>
-    <string name="bluetooth">Bluetooth</string>
+    <string name="menu_control">Control</string>
+    <string name="menu_bluetooth">Bluetooth</string>
+    <string name="available_devices">Available Devices</string>
+    <string name="scan">Scan</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="connected">Connected</string>
+    <string name="connect">Connect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="stop">Stop</string>
+    <string name="title_devices">BLE Device Scan</string>
+    <string name="ble_not_supported">BLE is not supported</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+    <string name="connecting">Connecting</string>
+    <string name="disconnecting">Disconnecting</string>
+    <string name="send">Send</string>
+    <string name="lock">Lock</string>
+    <string name="mute">Mute</string>
+    <string name="muted">Muted</string>
+    <string name="not_locked">Not Locked</string>
+    <string name="serial_number">Serial Number</string>
+    <string name="part_number">Part Number</string>
+    <string name="built_date">Built Date</string>
+    <string name="count">Count</string>
+    <string name="version">Version</string>
+    <string name="address_type">Address Type</string>
+    <string name="ip_address">IP Address</string>
+    <string name="subnet_mask">Subnet Mask</string>
+    <string name="default_gateway">Default Gateway</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="redundancy">Redundancy</string>
+    <string name="mode">Mode</string>
+    <string name="unit_name">Unit Name</string>
+    <string name="online">Online</string>
+    <string name="set">SET</string>
+    <string name="menu_info">Info</string>
+    <string name="menu_alarms">Alarms</string>
+    <string name="menu_moonitor">Monitor</string>
+    <string name="menu_network">Network</string>
+    <string name="menu_redundancy">Redundancy</string>
+    <string name="demo">Demo</string>
+    <string name="attenuation">Attenuation</string>
+    <string name="frequency">Frequency</string>
+    <string name="lo_select">LO Select</string>
+    <string name="regular">Regular</string>
+    <string name="extended">Extended</string>
+
+    <string-array name="address_types_array">
+        <item>Waiting for data</item>
+        <item>Static</item>
+        <item>Dynamic</item>
+    </string-array>
+
+    <string-array name="redundancy_status_array">
+        <item>Disable</item>
+        <item>Enable</item>
+    </string-array>
+
+    <string-array name="redundancy_mode_array">
+        <item>Cold Standby</item>
+        <item>Hot Standby</item>
+    </string-array>
+
+    <string-array name="redundancy_unit_name_array">
+        <item>BUC A</item>
+        <item>BUC B</item>
+    </string-array>
 </resources>
