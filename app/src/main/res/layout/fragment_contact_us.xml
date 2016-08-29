@@ -3,27 +3,49 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.irttechnologies.gui.android.ContactUsFragment"
-    android:id="@+id/fragment_contact_us">
+    tools:context=".FragmentContactUs"
+    android:id="@+id/fragment_contact_us"
+    android:background="@drawable/connecting_world">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/irt_address" />
+        android:layout_margin="20dp"
+        android:background="@color/irt_background"
+        android:padding="10dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/irt_phone" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/irt_address"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_margin="10dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/irt_fax" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/irt_phone"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_margin="10dp" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/irt_email" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/irt_fax"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/irt_email"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_margin="10dp" />
+    </LinearLayout>
 
 </LinearLayout>
