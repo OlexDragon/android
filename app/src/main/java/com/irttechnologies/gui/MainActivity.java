@@ -15,12 +15,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.Toast;
 
 import com.irttechnologies.gui.enums.BluetoothProfileState;
 import com.irttechnologies.gui.enums.ScanStatus;
-import com.irttechnologies.gui.interfaces.ble.ScanStatusListener;
 import com.irttechnologies.gui.interfaces.SelectionListener;
+import com.irttechnologies.gui.interfaces.ble.ScanStatusListener;
 import com.irttechnologies.gui.services.ScanStatusReceiver;
 import com.irttechnologies.gui.services.SelectionStatusReceiver;
 import com.irttechnologies.gui.subfragments.FragmentAlarms;
@@ -29,7 +31,7 @@ import com.irttechnologies.gui.subfragments.FragmentMonitor;
 import com.irttechnologies.gui.subfragments.FragmentNetwork;
 import com.irttechnologies.gui.subfragments.FragmentRedundancy;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnTouchListener{
 
     private static final String PREFS_NAME = "irt_android_gui";
     public static final String SELECTED_MENU = "selected_menu";
@@ -66,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
+    private Menu menu;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -150,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override  public boolean onCreateOptionsMenu(Menu menu) {
+        this.menu = menu;
 
         if(mSelected)
             menuIrt(menu);
@@ -161,12 +165,13 @@ public class MainActivity extends AppCompatActivity {
 
     @Override  public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
-        Log.e(TAG, R.id.menu_redundancy + " : " + item);
         return showFragment(item.getItemId());
     }
 
     private void menuIrt(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_irt, menu);
+
+        //Show connection status
         menuItemStatus = menu.findItem(R.id.menu_status);
     }
 
@@ -188,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void savePreference(int menuId) {
 
-        if(menuId == R.id.menu_bluetooth)
+        if(menuId == R.id.menu_stop || menuId == R.id.menu_scan || menuId == R.id.menu_refresh || menuId == R.id.menu_status)
             return;
 
         final SharedPreferences preferences = getPreferences(Context.MODE_PRIVATE);
@@ -258,12 +263,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showFragment(Fragment fragment) {
-        if(findViewById(R.id.main_frame) != null){
-            boolean createNew = fragment == null;
+        final View viewById = findViewById(R.id.main_frame);
+        if(viewById == null)
+            return;
 
-            // Create a new Fragment to be placed in the activity layout
-             showFragment(createNew, fragment);
-        }
+        viewById.setOnTouchListener(this);
+        boolean createNew = this.fragment == null;
+
+        // Create a new Fragment to be placed in the activity layout
+        showFragment(createNew, fragment);
+
     }
 
     private void showFragment(boolean createNew, Fragment fragment) {
@@ -283,5 +292,83 @@ public class MainActivity extends AppCompatActivity {
         final IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(action);
         return intentFilter;
+    }
+
+    private float x;
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (event.getAction()){
+            case MotionEvent.ACTION_DOWN:
+                x = event.getX();
+                break;
+            case MotionEvent.ACTION_UP:
+                selectMenu(x -event.getX());
+        }
+        return true;
+    }
+
+    private void selectMenu(float moveBy) {
+        if(Math.abs(moveBy)<300)
+            return;
+
+        final int menuId = getPreference();
+        int position = 0;
+
+        for(int i=0; i<menu.size(); i++)
+            if(menu.getItem(i).getItemId()==menuId){
+                position = i;
+                break;
+            }
+
+        if(position==0 && menuId==R.id.menu_bluetooth)
+            position = 2;
+
+        int itemId;
+        MenuItem item;
+        if(moveBy>=0) {//select next menuItem
+            itemId = shiftRight(position);
+
+        }else{  //previews item
+            itemId = shiftLeft(menuId, position);
+        }
+
+        showFragment(itemId);
+    }
+
+    private int shiftRight(int position) {
+        MenuItem item;
+        int itemId;
+        position++;
+        if(position>=menu.size())
+            position = 0;
+
+        item = menu.getItem(position);
+        itemId = item.getItemId();
+        if(itemId == R.id.menu_refresh || itemId==R.id.menu_status)
+            itemId = R.id.menu_bluetooth;
+        return itemId;
+    }
+
+    private int shiftLeft(int menuId, int position) {
+        Log.e(TAG, "enter: position="+position + "; R.id.menu_scan=" +R.id.menu_scan + "; R.id.menu_stop=" +R.id.menu_stop + "; R.id.menu_bluetooth=" +R.id.menu_bluetooth);
+        MenuItem item;
+        int itemId;
+        position--;
+        if(position < 0)
+            position = menu.size() - 1;
+        Log.e(TAG, "shift down: position="+position);
+
+        item = menu.getItem(position);
+        itemId = item.getItemId();
+
+        Log.e(TAG, "set itemId: itemId="+itemId);
+        if(itemId== R.id.menu_scan || itemId==R.id.menu_stop || itemId==R.id.menu_status)
+            if(menuId==R.id.menu_bluetooth)
+                itemId = menu.getItem(menu.size() - 1).getItemId();
+            else
+                itemId = R.id.menu_bluetooth;
+
+        Log.e(TAG, "exit: itemId="+itemId);
+        return itemId;
     }
 }

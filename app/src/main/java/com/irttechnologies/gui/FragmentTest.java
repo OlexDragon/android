@@ -198,8 +198,6 @@ public class FragmentTest extends Fragment implements View.OnClickListener {
                 BluetoothValue bluetoothValue = new BleValue(selectedBluetoothGattService.getUuid(), selectedCharacteristic.getUuid(), getValue());
                 final boolean sent = bleService.writeCharacteristic(bluetoothValue);
 
-                Log.e(TAG, "sent=" +sent);
-
                 handler.postDelayed(this, period);
             }
 
