@@ -25,4 +25,5 @@
     <color name="about_title">#0798d4</color>
     <color name="irt_background">#CC081738</color>
     <color name="transparent">#00000000</color>
+    <color name="warning">#FFCC66</color>
 </resources>
