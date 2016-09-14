@@ -17,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.irttechnologies.gui.enums.BluetoothProfileState;
@@ -69,6 +70,14 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         }
     };
     private Menu menu;
+    private Button bttAboutUs;
+    private Button bttAlarms;
+    private Button bttContactUs;
+    private Button bttControl;
+    private Button bttInfo;
+    private Button bttMonitor;
+    private Button bttNetwork;
+    private Button bttRedundancy;
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,6 +127,15 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         });
 
         getSupportActionBar().setDisplayShowTitleEnabled(true);
+
+        bttAboutUs = (Button)findViewById(R.id.bttAboutUs);
+        bttAlarms = (Button)findViewById(R.id.bttAlarms);
+        bttContactUs = (Button)findViewById(R.id.bttContactUs);
+        bttControl = (Button)findViewById(R.id.bttControl);
+        bttInfo = (Button)findViewById(R.id.bttInfo);
+        bttMonitor = (Button)findViewById(R.id.bttMonitor);
+        bttNetwork = (Button)findViewById(R.id.bttNetwork);
+        bttRedundancy = (Button)findViewById(R.id.bttRedundancy);
     }
 
     @Override
@@ -173,6 +191,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
         //Show connection status
         menuItemStatus = menu.findItem(R.id.menu_status);
+
+        enableButtons(true);
     }
 
     private void menuScan(Menu menu) {
@@ -189,6 +209,19 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 menu.findItem(R.id.menu_scan).setVisible(false);
                 menu.findItem(R.id.menu_refresh).setActionView(R.layout.actionbar_indeterminate_progress);
         }
+        enableButtons(false);
+    }
+
+    private void enableButtons(boolean enabled) {
+        bttAlarms   .setVisibility(enabled ? View.VISIBLE : View.GONE);
+        bttControl  .setVisibility(enabled ? View.VISIBLE : View.GONE);
+        bttInfo     .setVisibility(enabled ? View.VISIBLE : View.GONE);
+        bttMonitor  .setVisibility(enabled ? View.VISIBLE : View.GONE);
+        bttNetwork  .setVisibility(enabled ? View.VISIBLE : View.GONE);
+        bttRedundancy.setVisibility(enabled ? View.VISIBLE : View.GONE);
+
+        bttAboutUs.setVisibility(enabled ? View.GONE : View.VISIBLE);
+        bttContactUs.setVisibility(enabled ? View.GONE : View.VISIBLE);
     }
 
     private void savePreference(int menuId) {
@@ -207,40 +240,49 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         savePreference(menuId);
 
         switch (menuId) {
+            case R.id.bttAboutUs:
             case R.id.menu_about_us:
                 showFragment(new FragmentAboutUs());
                 getSupportActionBar().setTitle(getString(R.string.menu_about_us));
                 return true;
+            case R.id.bttContactUs:
             case R.id.menu_contact_us:
                 showFragment(new FragmentContactUs());
                 getSupportActionBar().setTitle(getString(R.string.menu_contact_us));
                 return true;
+            case R.id.bttControl:
             case R.id.menu_control:
 //                showFragment(new FragmentTest());
                 showFragment(new FragmentControl());
                 getSupportActionBar().setTitle(getString(R.string.menu_control));
                 return true;
+            case R.id.bttBluetooth:
             case R.id.menu_bluetooth:
                 final FragmentBluetooth fragment = new FragmentBluetooth();
                 showFragment(fragment);
                 getSupportActionBar().setTitle(getString(R.string.available_devices));
                 return true;
+            case R.id.bttAlarms:
             case R.id.menu_alarms:
                 showFragment(new FragmentAlarms());
                 getSupportActionBar().setTitle(getString(R.string.menu_alarms));
                 return true;
+            case R.id.bttInfo:
             case R.id.menu_info:
                 showFragment(new FragmentInfo());
                 getSupportActionBar().setTitle(getString(R.string.menu_info));
                 return true;
+            case R.id.bttMonitor:
             case R.id.menu_monitor:
                 showFragment(new FragmentMonitor());
                 getSupportActionBar().setTitle(getString(R.string.menu_moonitor));
                 return true;
+            case R.id.bttNetwork:
             case R.id.menu_network:
                 showFragment(new FragmentNetwork());
                 getSupportActionBar().setTitle(getString(R.string.menu_network));
                 return true;
+            case R.id.bttRedundancy:
             case R.id.menu_redundancy:
                 showFragment(new FragmentRedundancy());
                 getSupportActionBar().setTitle(getString(R.string.menu_redundancy));
@@ -370,5 +412,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
         Log.e(TAG, "exit: itemId="+itemId);
         return itemId;
+    }
+    public void onClickButton(View view) {
+        showFragment(view.getId());
     }
 }

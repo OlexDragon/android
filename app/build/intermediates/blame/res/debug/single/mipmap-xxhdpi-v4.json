@@ -10,5 +10,33 @@
     {
         "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\redundancy.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\redundancy.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\bluetooth.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\bluetooth.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\info.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\info.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\contact_us.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\contact_us.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\monitor.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\monitor.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\network.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\network.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi-v4\\about_us.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\about_us.png"
     }
 ]
