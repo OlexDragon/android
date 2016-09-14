@@ -8,17 +8,87 @@
 
     <!-- The main content view -->
     <FrameLayout
-        android:id="@+id/main_frame"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
 
-    <ListView android:id="@+id/left_drawer"
-        android:layout_width="240dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:choiceMode="singleChoice"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="#111" />
+        <FrameLayout
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></FrameLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:background="@color/irt_background"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/bttInfo"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/info"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttAlarms"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/alarms"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttControl"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/control"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttMonitor"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/monitor"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttNetwork"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/network"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttRedundancy"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/redundancy"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttContactUs"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/contact_us"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttAboutUs"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/about_us"
+                android:onClick="onClickButton" />
+
+            <Button
+                android:id="@+id/bttBluetooth"
+                android:layout_width="@dimen/square_button"
+                android:layout_height="@dimen/square_button"
+                android:background="@mipmap/bluetooth"
+                android:onClick="onClickButton" />
+
+        </LinearLayout>
+
+    </FrameLayout>
 
 </android.support.v4.widget.DrawerLayout>
