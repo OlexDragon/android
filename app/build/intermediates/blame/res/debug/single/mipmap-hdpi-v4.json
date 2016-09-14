@@ -1,5 +1,13 @@
 [
     {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\control.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-hdpi\\control.png"
+    },
+    {
+        "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\alarms.png",
+        "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-hdpi\\alarms.png"
+    },
+    {
         "merged": "C:\\Program Files\\Subversion\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi-v4\\ic_launcher.png",
         "source": "C:\\Program Files\\Subversion\\android\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
     }
